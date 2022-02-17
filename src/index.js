@@ -33,7 +33,8 @@ class Wordle {
 
     async guess() {
         let w =  await this.words
-        return w
+        const rand = getRandomInt(0, w.length);
+        return w[rand]
     }
 }
 
@@ -42,5 +43,13 @@ const fetchAllWords = async () => {
     return words.data
 };
 
-const wordle = new Wordle();
+const getRandomInt = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }
+ 
+export { fetchAllWords, Wordle };
+
+const wordle = new Wordle()
 wordle.guess()
