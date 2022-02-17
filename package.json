@@ -4,7 +4,9 @@
   "description": "An algorithm to solve wordle optimally",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server/index.js"
   },
   "keywords": [
     "wordle",
@@ -12,5 +14,11 @@
     "probability"
   ],
   "author": "yahaya ohinoyi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  },
+  "type": "module"
 }
