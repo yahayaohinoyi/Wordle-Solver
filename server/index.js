@@ -10,7 +10,6 @@ app.get('/', (req, res) => {
 
 app.get('/words', async (req, res) => {
     const content = fs.readFileSync('server/words.txt', 'utf8')
-    debugger;
     const words = content.split(" ")
     res.send(words)
 })
